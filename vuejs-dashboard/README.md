@@ -1,4 +1,4 @@
-# vue-vuex-axios-blog
+# vuejs-dashboard
 
 ## Project setup
 ```
