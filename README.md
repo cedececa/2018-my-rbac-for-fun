@@ -6,7 +6,7 @@ In 2018 this project was made for experimenting Expressjs, MongoDB and VueJS. Th
 It's based on RBAC (Role-based access control).
 The administrator can control every role's permissions.
 
-![Demo Video](https://)
+![Demo Video](https://https://github.com/cedececa/2018-my-rbac-for-fun/blob/master/record.mp4)
 
 ## Necessary Softwares
 1. NPM v8
@@ -14,7 +14,7 @@ The administrator can control every role's permissions.
 3. Nodejs
 4. Vuejs
 
-## Installation
+# Installation
 Clone this project and cd to each project for install dependencies 
 ```bash
 $ npm install 
@@ -35,8 +35,8 @@ the default port is 8080
 ## Note
 For localhost test, Need to disabled same-site for localhost http cookie setting.
 1. chrome://flags/
-2. ![disabled picture](https://)
+2. ![disabled picture](https://github.com/cedececa/2018-my-rbac-for-fun/blob/master/chrome-same-site-disabled.jpg)
 
 ## License
 
-MIT © [Haithem Mosbahi](mailto:haithem.mosbahi@gmail.com)
+MIT © [Cheng Deng](mailto:ppnncc@live.com)
