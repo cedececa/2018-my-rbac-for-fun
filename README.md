@@ -3,7 +3,7 @@
 
 In 2018 this project was made for experimenting Expressjs, MongoDB and VueJS. The main functioanlity was aimed to allow that the adminitrator of the company can manipulate all permissions for every access. 
 
-It's based on RBAC (Role-based access control).
+It's based on **RBAC** (**Role-based access control**) that's part of **IAM** (**Identity Access Management**).
 The administrator can control every role's permissions.
 
 
