@@ -6,7 +6,7 @@ In 2018 this project was made for experimenting Expressjs, MongoDB and VueJS. Th
 It's based on RBAC (Role-based access control).
 The administrator can control every role's permissions.
 
-![Demo Video](https://https://github.com/cedececa/2018-my-rbac-for-fun/blob/master/record.mp4)
+![Demo Video](https://github.com/cedececa/2018-my-rbac-for-fun/blob/master/record.mp4)
 
 ## Necessary Softwares
 1. NPM v8
