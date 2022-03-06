@@ -1,0 +1,36 @@
+Cliente
+. Cada label es mostrado por su orden en orden ascendente
+
+
+
+DB Schemas Design
+. El nombre de cada articulo es unico 
+. Cada articulo puede contener una cantidad indefinida de lables-descripciones
+. Cada label tiene un orden unico de 0 a infinito
+
+Restful APIs
+. Crear Articulo
+. Actualizar(Modificar) articulo y los labels-Des por su ID
+. Eliminar un label-descripcion de un articulo por PID y su ID
+. Eliminar un articulo y sus lables-descripciones por PID
+. Obtener un articulo y sus labels-descrip por ID
+. Obtener una lista de articulos por numero de pagina
+
+
+DB Schemas Design
+var mongoose = require('mongoose')
+var Schema = mongoose.Schema
+// label & description
+var ldSchema = new Schema({
+    labelName: String,
+    labelDescription: String
+});
+var articuloSchema = new Schema({
+    nombre: String,
+    LDs: [ldSchema],
+    creada: { type: Date },
+    actualizada: { type: Date, default: Date.now },
+    postedBy: {type:mongoose.Schema.Types.ObjectId, ref:'User'}
+});
+var Articulo = mongoose.model('Articulo', articuloSchema);
+module.exports = Articulo;

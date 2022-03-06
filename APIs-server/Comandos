@@ -1,0 +1,8 @@
+En Linux 
+
+Start mongodb
+roca@ubuntu:/usr/local/mongodb/etc$ mongod  -f mongod.conf
+
+Start Server
+sudo debug=lab1:* PORT=80 npm start
+sudo debug=lab1 PORT=80 npm start

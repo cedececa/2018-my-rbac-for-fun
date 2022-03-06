@@ -1,0 +1,108 @@
+Usuario
+    - puede tener 0 o muchos roles
+    - tiene un role (Usuario normal) al menos
+
+Role 
+    - hay dos tipos de Usuarios al principio
+        1 - usuario normal
+        2 - usuario root
+    - se permite añadir role
+    - el nombre de role es unico
+    - cada role puede ejecutar las operaciones permitidas en APIPermitidos
+
+APIs
+    - cada api tiene un nombre,descripcion ,operacion: { tipo:"post|put|delete|get" ,path:""} que se corresponde a un request
+
+
+
+Hay un super administrator (APIS)
+    - para Usuario
+        -- puede actualizar(actualizar/eliminar) un role para Usuarios
+    - para Role
+        -- puede crear un role nuevo
+        -- puede obtener un role existente
+        -- puede modificar(actualizar/eliminar) APISPermitidos a un role
+    - para APIs
+        -- puede crear API nuevo
+        -- puede obtener un API existente
+        -- puede modificar(actualizar/eliminar) un API
+
+Cada usuario normal
+    - cuando ejecta una operacion O el sistema comprueba los roles que tiene, y los APIPermitidos que tienen. 
+      si O.tipo y O.path está en APIPermitidos. 
+      El sistema le deja hacer la operacion O. 
+        {   
+            code: 0,  // operacion permitida
+            msg:"",
+            resultado: result
+        } 
+
+      En caso contrario, 
+      se rechaza y se manda un json
+        {            
+            code: 1,  // operacion no permitida
+            msg:"operacion no permitida." ,
+            resultado: result
+        } 
+
+
+
+APIS y Funciones que hay que implementar
+    Funciones Globales
+        - 1. Comprobar si ha logueado mediante sesion 
+            -- se pide el token del cookie del cliente
+                --- token está en sesion    -> next(comprobar los roles)
+                --- token no está           -> se pasa al registrar o se retorna un json
+                    {
+                        code: 1,
+                        msg:"por favor, ve a loguear o registrar"
+                    } 
+        - 2. Comprobar los roles que tiene cada usuario cuando hace una operacion 
+
+    APIs
+        - Usuario 
+            -- Systema de Autenticacion
+                -- recuperar password 
+                -- modificar password
+                -- loguear 
+                    --- si password y email es correcto 
+                        1 - se genera un token  
+                        2 - se guarda en la sesion 
+                        3 - se manda al cliente y se guarda en el cookie del navegador del cliente 
+                    --- si no es correcto
+                        1 - {
+                                code: 1,
+                                msg:'Email or Password incorrect'
+                            }
+                -- logueado?
+                    --- se pide 
+                -- salir
+                -- registrar
+                
+            -- crear uno nuevo
+            -- modificar uno existente mediante ID
+            -- eliminar uno existente mediante ID
+            -- obtener sus roles mediante ID
+        - Role
+            -- crear uno nuevo
+            -- modificar uno existente mediante ID
+            -- eliminar uno existente mediante ID
+            -- otener sus APISPermitidos mediante ID
+        - APIs
+            -- crear uno nuevo
+            -- modificar uno existente mediante ID
+            -- eliminar uno existente mediante ID
+    
+Como funcionar este sistema de RBAC
+    1 - Preparar un role de root que tiene todos APIS (puede ejecutar cualquier operacion) 
+    2 - Preparar un usuario y asignarle role root.
+    3 - Preparar APIS manualmente
+    4 - En el GUI 1 de panel de administracion de RBAC
+        -- se pide email y password de usuario
+        -- boton de entrar
+        -- boton de recuperar la contraseña
+        -- input de email
+        -- input de password
+    5 - En el GUI 2 de panel de administracion de RBAC
+            -- listar lo que puede hacer el usuario logueado 
+                --- Como : consultar todos los APISPermitidos que tiene el usuario

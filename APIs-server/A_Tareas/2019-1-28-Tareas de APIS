@@ -1,0 +1,56 @@
+Backend
+
+    Tareas de APIS
+
+        Item
+
+            Statics Methods y RestFull APIS
+                
+                ok  CreateNuevo         
+                ok  EliminarPorID
+                ok  ModificarPorID
+                ok  ObtenerPorID
+            
+            Instance Methods y RestFull APIS
+                ok setearComoVendido
+
+            RestFull APIS 
+                ok PaginarItemsPorNada
+
+
+        Catalogo
+            Statics Methods y RestFull APIS
+            
+                ok  CreateNuevo
+                ok  EliminarPorID
+                ok  ModificarPorID
+                ok  ObtenerPorID
+
+            RestFull APIS 
+                ok  PaginarCatalogos                se lista items (con enVenta = true)             por fecha de creacion de nuevo a antiguo
+                ok  PaginarItemsPorCatalogoNombre            se lista por fecha de creacion de nuevo a antiguo
+
+        User    
+
+            RestFull APIS 
+                OK PaginarItemsPublicadosParaVenderPorUserID         se lista items (con enVenta = true)             por fecha de creacion de nuevo a antiguo
+                OK PaginarItemsVendidosPorUserID                     se lista items (con enVenta = false)            por fecha de creacion de nuevo a antiguo
+                OK PaginarItemsGustadosPorUserID                       
+                OK PaginarItemsVistosPorUserID                       
+                P  PaginarItemsPublicadosParaVenderRapidoPorUserID   se lista items (con enVenta = true y 
+                        Pendiente:   falta logica
+                                                                                    venderRapido = true)             por fecha de creacion de nuevo a antiguo
+            Instance Methods y RestFull APIS
+                ok   publicarMiItemNuevo
+                ok   eliminarMiItemPorID
+                ok   obtenerMiItemPorID
+                ok   setearMiItemComoVendido
+
+                ok    anadirUnItemComoGustado
+                ok    anadirUnItemComoVisto
+                ok    eliminarUnItemGustado
+                ok    eliminarUnItemVisto
+
+FrontEnd
+    Tareas de Integracion de Servidor-APIS con Frontend-components 
+    

@@ -1,0 +1,47 @@
+
+// Crear un articulo   127.0.0.1/articulo/       
+// POST  - req.body.articulo
+{
+    "articulo":{
+        "nombre": "articulo2",
+        "LDs": [{
+            "labelName": "label1",
+            "labelDescription": "description1"
+        },{
+            "labelName": "label2",
+            "labelDescription": "description2"
+        }]
+    }
+}
+
+// Actualizar un articulo
+// PUT  - req.body.articulo
+{
+    "articulo": {
+        "_id": "id",
+        "nombre": "articulo12-cheng",
+        "LDs": [{}...] 
+    }
+}
+
+// Eliminar a label
+// Delete  - req.body.id, req.body.pid
+{
+	"pid":"pid",
+	"id":"id"
+}
+
+// Eliminar un articulo 
+// Delete  - req.body.id
+{
+	"id":"id"
+}
+
+// Obtener una lista de articulos
+// GET  -- req.params.pageNumber
+127.0.0.1/articulo/pagina/6
+
+// Obtener un articulo por id
+// GET  -- req.params.id
+127.0.0.1/articulo/pagina/6
+

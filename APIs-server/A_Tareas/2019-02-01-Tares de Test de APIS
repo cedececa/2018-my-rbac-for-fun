@@ -1,0 +1,57 @@
+Backend
+
+    Tareas de APIS
+
+        Item
+
+            Statics Methods y RestFull APIS
+                
+                Tested  CreateNuevo         
+                Tested  EliminarPorID
+                Tested  ModificarPorID
+                Tested  ObtenerPorID
+            
+            Instance Methods y RestFull APIS
+                Tested setearComoVendido
+
+            RestFull APIS 
+                Tested PaginarItemsPorNada
+
+
+        Catalogo
+            Statics Methods y RestFull APIS
+            
+                Tested  CreateNuevo
+                Tested  EliminarPorID
+                Tested  ModificarPorID
+                Tested  ObtenerPorID
+
+            RestFull APIS 
+                Tested  PaginarCatalogos                se lista items (con enVenta = true)             por fecha de creacion de nuevo a antiguo
+                Tested  PaginarItemsPorCatalogoNombre            se lista por fecha de creacion de nuevo a antiguo
+                Tested  ObtenerImagenDeUnCatalogo
+                
+        User    Tested
+
+            RestFull APIS 
+                Tested PaginarItemsPublicadosParaVenderPorUserID         se lista items (con enVenta = true)             por fecha de creacion de nuevo a antiguo
+                Tested PaginarItemsVendidosPorUserID                     se lista items (con enVenta = false)            por fecha de creacion de nuevo a antiguo
+                Tested PaginarItemsGustadosPorUserID                       
+                Tested PaginarItemsVistosPorUserID                       
+                P  PaginarItemsPublicadosParaVenderRapidoPorUserID   se lista items (con enVenta = true y 
+                        Pendiente:   falta logica
+                                                                                    venderRapido = true)             por fecha de creacion de nuevo a antiguo
+            Instance Methods y RestFull APIS
+                Tested   publicarMiItemNuevo
+                Tested   eliminarMiItemPorID
+                Tested   obtenerMiItemPorID
+                Tested   setearMiItemComoVendido
+
+                Tested    anadirUnItemComoGustado
+                Tested    anadirUnItemComoVisto
+                Tested    eliminarUnItemGustado
+                Tested    eliminarUnItemVisto
+
+FrontEnd
+    Tareas de Integracion de Servidor-APIS con Frontend-components 
+    

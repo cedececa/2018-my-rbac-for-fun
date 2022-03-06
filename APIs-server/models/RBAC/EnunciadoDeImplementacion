@@ -1,0 +1,17 @@
+RBAC   
+    < insertar las apis de app a DB
+    < eliminar las apis de DB que no estan en las de app
+    < comprobar si un usuario tiene permiso de acceso al api requested
+    < RBAC actualiza los apis de Roles a DB
+
+
+
+Usuario
+    < obtener entidades de roles mediante Role.getRolePorNombre()
+
+Role
+    < obtener api valido comprobando por API.existe(api.method, api.path)
+
+API 
+    < solo guardan todos los apis existente de app en DB 
+
