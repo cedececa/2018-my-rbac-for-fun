@@ -7,9 +7,8 @@ It's based on RBAC (Role-based access control).
 The administrator can control every role's permissions.
 
 
-<video  controls>
-  <source src="https://github.com/cedececa/2018-my-rbac-for-fun/blob/master/record.mp4" type="video/mp4">
-</video>
+[![Watch this demo]](https://github.com/cedececa/2018-my-rbac-for-fun/blob/master/record.mp4)
+
 
 ## Necessary Softwares
 1. NPM v8
